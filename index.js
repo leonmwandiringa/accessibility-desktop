@@ -5,7 +5,7 @@ const path = require('path');
 
 let win;
 
-
+//create the window
 function createWindow() { 
    win = new BrowserWindow({width: 1000, height: 800}); 
    win.loadURL(url.format ({ 
@@ -14,35 +14,5 @@ function createWindow() {
       slashes: true 
    }));
 }  
-const template = [
-{
-    label: 'MEdit',
-    submenu: [
-        {
-            role:'edt1'
-        },
-        {
-            type: 'seperator'
-        },
-        {
-            role: 'edt2'
-        }
-    ]
-},
-{
-    label: 'savr',
-    submenu:[
-        {
-            role: 'dsf'
-        },
-        {
-            role: 'dasdasda'
-        }
-    ]
-}
 
-];
-
-const menu = Menu.buildFromTemplate(template);
-Menu.setApplicationMenu(menu);
 app.on('ready', createWindow); 

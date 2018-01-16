@@ -4,31 +4,180 @@
       <meta charset = "UTF-8">
       <title>Accessibility</title>
       <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./custom.css">
    </head>
    
    <body>
 
-      <div class="container">
-      <form class="formal">
-          <div class="form-group">
-              <input type="text" class="form-control" name="name" placeholder="enter naame">
-              
+<!-- navigation -->
+<div class="container-fluid">
+    <div id="insightsleft" class="overlay">
+    
+      <a href="javascript:void(0)" class="closebtn" style="color: white; opacitty: 1;" id="closeleftbtn">&times;</a>
+      <div class="overlay-content">
+      <h3 class="text-center" style="color: white; opacity: 1; margin: 0 0 10px;"> Page Title: <span id="pagetitle"></span></h3>
+      <div class="col-sm-12">
+      <div class="theloader2 loaddd" style="position: absolute; left: 50%; background: black; border-radius: 2px; z-index: 99999;">
+      <!-- style="position: absolute;left: 50%;" -->
+          <span class="theinner1"></span>
+          <span class="theinner2"></span>
+          <span class="theinner3"></span>
+        </div>
+        <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+        <p class="lead">Total Page size size: <span id="pgsize"></span></p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success jsbar" role="progressbar" style="">
+            <span id="jsval"></span>Javascript
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="surname">
+          <div class="progress-bar progress-bar-warning cssbar" role="progressbar" style="">
+          <span id="cssval"></span>CSS 
           </div>
-              <button type="button" name="send" class="btn btn-primary" id="appendstf">append</button>
-      </form>
-      <table class="table table-hover table-bordered" id="tablecont" style="margin-top: 40px;">
-          <caption>The content details</caption>
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>surname</th>
-        </tr>
+          <div class="progress-bar progress-bar-danger imgbar" role="progressbar" style="">
+          <span id="imgval"></span> Images
+          </div>
+        </div>
+        <!--bars  -->
+            <div class="col-sm-4">
+            <h4 class="text-center"> Page Load Speed</h4>
+                <div class="well well-lg">
+                    
+                    <p class="lead" id="pgspeed"></p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            <h4 class="text-center"> Page Usability</h4>
+                <div class="well well-lg">
+                    
+                    <p class="lead" id="pgusability"></p>
+                </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
 
-      </table>
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+        <div class="panel-heading"><h2 id="meta"> Meta Tags</h2></div>
+        <div class="panel-body">
+          <table class="table table-responsive table-bordered">
+            <thead>
+              <tr style="background: #84afff; color: white;"> 
+                <th>Meta Type</th>
+                <th>Content</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <th>Meta Title</th>
+                <td id="meta-title-txt"></td>
+                <td id="meta-title-status"></td>
+              </tr>
+              <tr class="active">
+                <th>Meta Description</th>
+                <td id="meta-desc-txt"></td>
+                <td id="meta-desc-status"></td>
+              </tr>
+              <tr>                      
+              <th>Meta Keywords</th>
+              <td id="meta-keywords-txt"></td>
+              <td id="meta-keywords-status"></td>
+    
+              </tr>
+            </thead>
+    
+          </table>
+        
+          </div>
+        </div>
+      </div>
+    
+    
+      </div>
     </div>
+    <button id="leftInsightsbtn" style="margin: 10px 0 10px 10px;" class="btn btn-default pull-left" type="button">&#9776; View Page Insight</button>
+    <!-- <button id="rightInsightsbtn" style="margin: 10px 10px 10px 10px;" class="btn btn-default pull-right" type="button">&#9776; View Page Insight</button> -->
+    
+    
+      <div class="btn-group" id="controls2" style="z-index: 999; z-index: 999;position: absolute;
+        display: inline-block;
+        margin: 10px; right: 10px;">
+        
+        <a href="javascript:void(0)" class="btn btn-primary" id="iphone6">iPhone 6</a>
+        <a href="javascript:void(0)" class="btn btn-primary" id="galaxys5">Galaxy S6</a>
+        <a href="javascript:void(0)" class="btn btn-primary" id="ipad1">iPad</a>
+        <a href="javascript:void(0)" class="btn btn-primary" id="ipadpro">iPad pro</a>
+      </div>
+    
+    </div>
+        <nav class="navbar navbar-inverse sitenavigation navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Insights Tool</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+        <div class="theloader">
+          <span class="theinner1"></span>
+          <span class="theinner2"></span>
+          <span class="theinner3"></span>
+        </div>
+        <p class="showpage text-center" style="margin-top: 40px;">
+        <span style="display: block; margin: 10px 0; font-size: 32px; font-weight: 700;">Test Page</span>
+        <a href="javascript:void(0)" class="btn btn-default btn-lg showthepage">Run The Test</a></p>
+        <!--source code exec-->      
+        <div class="codeExec1"></div>
+        <div class="codeExecBody" style="display: none;"></div>
+        <div class="codeExec3"></div>
+    <div id="codeExec">
+
+    <div class="container-fluid">
+        <div id="wrapper">
+          <div class="phone view_3" id="phone_1">
+            <iframe src="" id="frame_1"></iframe>
+          </div>
+        </div>
+     </div>
+    
+    </div>
+    
+    <div class="container-fluid thecontainer">
+      <div class="container">
+      <div class="search form" style="margin-top: 40px;">
+      
+      <h1 class="text-center theheader"> Fetch Pre developed Sites Source</h1>
+    
+            <form id="url-extract" class="url-extract">
+
+                <div class="center-block urltextbox">
+                    <div class="form-group col-md-8 col-md-push-2">
+                    <label for="url" class="sr-only"> Enter Url</label>
+                        <div class="input-group" style="box-shadow: 0 0 50px 2px rgba(128, 128,128, 0.60);">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-save"></i></span>
+                              <input type="text" class="form-control col-md-8" id="fetch-url-link" required>   
+                          <span class="input-group-btn">
+                              <a href="javascript:void(0)" class="btn btn-default" id="fetch-btn"> Fetch Url</a>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+    
+    
+        </div>
+        </div>
+        </div>
       <script src="./custom.js"></script>
    </body>
    
