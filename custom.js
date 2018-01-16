@@ -1,7 +1,10 @@
+//import {AnalyticsController} from "Controllers/AnalyticsController.js";
 const $ = require('jquery');
 const fs = require("fs");
 let filen = "storage/contacts.txt";
 
+//let contrval = new AnalyticsController("Leon");
+//console.log(contrval.getName);
 "use strict";
         /**
         *i apologise wrote spaghetti code on  this one, refactoring and making use of es6 on the way, forgive me urs truly - "No need for talk lets do this"
